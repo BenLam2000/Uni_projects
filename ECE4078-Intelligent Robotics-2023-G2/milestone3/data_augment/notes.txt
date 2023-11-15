@@ -1,0 +1,27 @@
+YOLO_dataset_1: 9800 images total, 7840 train, 980 valid, 980 test
+(done)		arena pics: 2/20 online backgrounds
+(uploaded)	fruit pics: green apple got stem, red apple half got half no stem, from 6 fixed angles only
+(trained)	fruit type proportion: {1: 0.2, 2:0.35, 3:0.35, 4:0.1}
+
+YOLO_dataset_2: 9800 images total, 7840 train, 980 valid, 980 test
+(done)		arena pics: 2/20 online backgrounds
+(uploaded)	fruit pics: green apple & red apple and capsicum all got stem, from 6 fixed angles + in between <--- CHANGED
+		fruit type proportion: {1: 0.2, 2:0.35, 3:0.35, 4:0.1}
+
+YOLO_dataset_3: 9900 images total, 7920 train, 990 valid, 990 test
+(done)		arena pics: 2/20 online backgrounds
+(uploaded)	fruit pics: green apple & red apple and capsicum all got stem, from 6 fixed angles + in between
+		fruit type proportion: {1: 0.35, 2:0.35, 3:0.2, 4:0.1}  <--- CHANGED
+
+YOLO_dataset_4: 9810 images total, 7848 train, 981 valid, 981 test
+(done)		arena pics: no online background, all arena only <--- CHANGED
+(uploaded)	fruit pics: green apple & red apple and capsicum all got stem, from 6 fixed angles + in between
+		fruit type proportion: {1: 0.35, 2:0.35, 3:0.2, 4:0.1}
+
+YOLO_dataset_5: 9900 images total, 7920 train, 990 valid, 990 test
+(done)		arena pics: 2/20 online backgrounds, new pics with brighter lightings and blue wall
+()		fruit pics: green apple & red apple and capsicum all got stem, from 6 fixed angles + in between, shiny apples
+		extra pics: aruco and fruit occlusion, shoe pics
+		fruit type proportion: {1: 0.35, 2:0.35, 3:0.2, 4:0.1}
+		OCCLUSION_DISTRIBUTION = {'aruco': 0.2, 'fruit': 0.2, 'both': 0.1, 'none': 0.5}
+		FRUIT_ROTATE_ANGLE = (-45, 45)
