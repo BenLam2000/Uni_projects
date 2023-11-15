@@ -1,0 +1,14 @@
+{"pose": [[1.2], [1.2], [3.141593]], "imgfname": "pibot_dataset/img_0.png"}
+{"pose": [[0.0], [0.8], [0.785398]], "imgfname": "pibot_dataset/img_1.png"}
+{"pose": [[1.2], [1.2], [-2.356194]], "imgfname": "pibot_dataset/img_2.png"}
+{"pose": [[1.2], [0.4], [2.356194]], "imgfname": "pibot_dataset/img_3.png"}
+{"pose": [[0.8], [0.0], [1.570796]], "imgfname": "pibot_dataset/img_4.png"}
+{"pose": [[0.4], [0.4], [0.785398]], "imgfname": "pibot_dataset/img_5.png"}
+{"pose": [[-0.4], [-0.8], [0.0]], "imgfname": "pibot_dataset/img_6.png"}
+{"pose": [[0.4], [0.0], [-1.570796]], "imgfname": "pibot_dataset/img_7.png"}
+{"pose": [[-0.4], [-0.4], [3.141593]], "imgfname": "pibot_dataset/img_8.png"}
+{"pose": [[-0.8], [0.0], [-2.356194]], "imgfname": "pibot_dataset/img_9.png"}
+{"pose": [[-1.2], [0.4], [-1.570796]], "imgfname": "pibot_dataset/img_10.png"}
+{"pose": [[-0.8], [-0.4], [1.570796]], "imgfname": "pibot_dataset/img_11.png"}
+{"pose": [[-1.2], [0.0], [0.785398]], "imgfname": "pibot_dataset/img_12.png"}
+{"pose": [[0.0], [0.4], [3.141593]], "imgfname": "pibot_dataset/img_13.png"}

@@ -1,0 +1,10 @@
+1. make robot more stable (lower caster balls) (leave some wiggle room, otherwise too much friction to move)
+2. Clean wheels
+3. recalibrate wheels (be as precise with the time as possible)
+3. find better path:
+	i. find the long lines of markers and align them in straight line, align isolated markers with other known markers in a straight line
+	ii. map clusters relative to every other cluster 
+	iii. when planning where to look from, make sure markers viewed from that angle is clearly seen, not curved/hidden
+	iv. min dist to see a marker is >1 grid box
+	v. don't move too long without seeing any markers on cam, uncertainty will increase
+	vi. staying longer and looking at things repeatedly may not increase accuracy

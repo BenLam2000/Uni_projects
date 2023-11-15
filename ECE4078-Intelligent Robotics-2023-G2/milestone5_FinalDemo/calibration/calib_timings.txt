@@ -1,0 +1,10 @@
+scale:
+10 ticks = 6.33s
+15 ticks = 4.28s
+20 ticks = 3.21s
+25 ticks = 2.67s
+
+baseline:
+15 ticks = 1.45s
+20 ticks = 1.02s
+25 ticks = 0.76s

@@ -1,0 +1,16 @@
+1. press "1" to enter mode 1
+2. press "left" to turn small angle
+3. when reach 30 deg, press "m" to measure markers, do for 360
+4. rmb to press "m" when reach back to 0 deg to save 4 measured markers in TRUEMAP & plot them, reset robot state to 0
+5. place robot back to origin
+6. press "ENTER" to start mode 2 + start SLAM
+7. do M2 SLAM
+8. when finish SLAM, press "s" to save map + pause SLAM + align markers
+9. place robot back to origin
+10. press "ENTER" to start mode 3 + switch EKF mode + start SLAM
+11. find fruit positions
+12. press "p" to detect image once
+13. press "n" to save prediction, raw image and robot pose
+14. when finish all 5 fruits, press "b" to run target pose est + update truemp_aligned with fruits + pause SLAM
+15. place robot back to origin
+16. press "ENTER" start mode 4 + switch EKF mode

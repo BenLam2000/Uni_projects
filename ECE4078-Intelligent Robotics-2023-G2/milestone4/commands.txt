@@ -1,0 +1,8 @@
+press 'p' to start real time detector
+press 'n' to save lab_output/pred_x.png, robot pose in lab_output/images.txt and raw image in pibot_dataset/img_x.png
+
+run generateGroundTruth.py in pycharm, plot the markers and fruits position -> TRUEMAP.txt
+run generateGroundTruthRobotPose.py in pycharm, plot the chosen poses -> TRUE_ROBOT_POSE.txt
+python modifyRobotPoses.py : images.txt -> modified images.txt file true robot poses
+python TargetPoseEst.py : modified images.txt -> targets.txt
+python CV_eval.py TRUEMAP.txt lab_output/targets.txt

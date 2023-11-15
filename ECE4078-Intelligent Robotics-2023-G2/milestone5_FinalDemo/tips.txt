@@ -1,0 +1,36 @@
+1. make robot more stable (lower caster balls) (leave some wiggle room, otherwise too much friction to move)
+2. Clean wheels
+3. recalibrate wheels (be as precise with the time as possible)
+3. find better path:
+	i. find the long lines of markers and align them in straight line, align isolated markers with other known markers in a straight line
+	ii. map clusters relative to every other cluster 
+	iii. don't move too long without seeing any markers on cam, uncertainty will increase
+	iv. staying longer and looking at things repeatedly may not increase accuracy
+
+for M3:
+planning:
+1. either 0.8m straight/0.566m diagonal 45 degrees (to make sure can see whole fruit within frame)
+2. 2-3 pics with diff poses for each fruit
+3. min 5 max 25 pics
+4. >=1 pic with >=2 types of fruits
+5. >=1 pic 0.8m away 
+6. if robot very far out, look around a bit until robot is correct position within SLAM GUI
+
+
+demo:
+1. align bbox centre line and frame centre line (to get 0 x_shift and horizontal rel dist=0)
+
+
+
+1. make robot more stable (lower caster balls) (leave some wiggle room, otherwise too much friction to move)
+2. Clean wheels
+3. recalibrate wheels (be as precise with the time as possible)
+3. find better path:
+	i. initial 360 
+	i. find the long lines of markers and align them in straight line, align isolated markers with other known markers in a straight line
+	ii. map clusters relative to every other cluster 
+	iii. when planning where to look from, make sure markers viewed from that angle is clearly seen, not curved/hidden
+	iv. min dist to see a marker is >1 grid box
+	v. don't move too long without seeing any markers on cam, uncertainty will increase
+	vi. staying longer and looking at things repeatedly may not increase accuracy
+	vii. compare other markers to first seen marker to get more accurate

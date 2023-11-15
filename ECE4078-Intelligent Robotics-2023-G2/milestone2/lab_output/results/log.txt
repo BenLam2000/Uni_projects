@@ -1,0 +1,19 @@
+Best RMSE: 0.0614 (test9)
+
+W4 Thursday:
+test1 test2 test3 (arena 1)
+recalibrate camera with 21 images
+test4 test5 (arena 1)
+
+W4 Friday:
+test6 test7 (arena 2)
+lower balls, clean wheels, recalibrate wheels
+test8 (arena 1)
+use straight line strategy 
+test9 (arena 1)
+
+W5 Tuesday:
+clean wheels, recalibrate wheels (takes around 30mins)
+test10 (arena 2)
+test11 (arena 1)
+test12 (arena 2)
