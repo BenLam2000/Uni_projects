@@ -2,11 +2,13 @@
 The goal of this group-based semester-long project was to build a robot that can locate 3 specified fruits in an arena in sequence autonomously while avoiding obstacles.
 
 # Rules and restrictions
-1. All groups had to use the provided robot - Alphabot2, which had a RaspberryPi as its core. Python was the language to program the robot. *pic of alphabot2*
-2. All groups had to use the provided arena for the robot demonstration, with 10 AruCo markers and 5 fruits that would be randomly placed on it. *pic of labeled arena*
-3. The only sensor allowed to use is the RaspberryPi camera. All other sensors onboard the Alphabot such as IR and ultrasonic sensors were strictly prohibited. Since this robot didn't have wheel encoders, we had to regularly recalibrate the robot's driving parameters to ensure the robot's actual motion did not deviate too much from its predicted trajectory. 
+<a href="" target="blank"><img align="center" src="https://github.com/BenLam2000/Uni_projects/blob/main/ECE4078-Intelligent%20Robotics-2023-G2/pics/Alphabot2-pizero-8.jpg?raw=true" height="200" /></a>
+1. All groups had to use the provided robot - Alphabot2, which had a RaspberryPi as its core. Python was the language to program the robot.
+<a href="" target="blank"><img align="center" src="https://github.com/BenLam2000/Uni_projects/blob/main/ECE4078-Intelligent%20Robotics-2023-G2/pics/arena_labelled.png?raw=true" height="400" /></a>
+3. All groups had to use the provided arena for the robot demonstration, with 10 AruCo markers and 5 fruits that would be randomly placed on it.
+4. The only sensor allowed to use is the RaspberryPi camera. All other sensors onboard the Alphabot such as IR and ultrasonic sensors were strictly prohibited. Since this robot didn't have wheel encoders, we had to regularly recalibrate the robot's driving parameters to ensure the robot's actual motion did not deviate too much from its predicted trajectory. 
 
-Based on this video *link to youtube video*, the following are the main parts shown in the video:
+Based on this [video of the final robot demo](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5), the following are the main parts shown in the video:
 # Part 1: Obtaining Marker References
 In an ideal scenario, we would be provided with a map of the ground truth locations of all ArUco markers and fruits on the arena, but not for the case during final demo. We came up with a solution to comput
 
