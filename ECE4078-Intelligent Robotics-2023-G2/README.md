@@ -27,7 +27,13 @@ The SLAM map obtained only captures the relative relationship between markers, n
 *SLAM aligned using true map*
 *SLAM aligned using 4 markers* 
 
-# Part 3: 
+# Part 3: Obtaining Fruit Poses
+Once we have the aligned map of all ArUco markers, we now need to obtain all 5 fruit locations on the arena by taking picures of the 5 fruits using the robot's camera. There are 2 important parts for this to work: knowing the robot's current location and the relative distance to a fruit captured by the camera.
+
+## 3.1: Localization Using Trilateration
+
+
+## 3.2: Obtaining Relative Fruit Distance Using Object Recognition
 
 
 
