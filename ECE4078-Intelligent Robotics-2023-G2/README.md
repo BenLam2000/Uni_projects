@@ -1,6 +1,6 @@
 # Overview
 <p align="justify">
-The goal of this group-based semester-long project was to develop and autonomous robot that can locate 3 fruits in an arena in a specified sequence while avoiding obstacles. [This](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5) is a video of the final robot demonstration.</p>
+The goal of this group-based semester-long project was to develop an autonomous robot that can locate 3 fruits in an arena in a specified sequence while avoiding obstacles. [This](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5) is a video of the final robot demonstration.</p>
 
 # Rules and restrictions
 <div align="center">
