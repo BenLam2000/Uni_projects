@@ -10,7 +10,7 @@ The goal of this group-based semester-long project was to develop an autonomous 
 <div align="center">
     <a href="" target="blank"><img align="center" src="https://github.com/BenLam2000/Uni_projects/blob/main/ECE4078-Intelligent%20Robotics-2023-G2/pics/arena_labelled.png?raw=true" height="400" /></a>
 </div>
-2. All groups had to use the provided arena for the robot demonstration, with 10 AruCo markers and 5 fruits that would be randomly placed on it.
+2. All groups had to use the provided arena for the robot demonstration, with 10 ArUco markers and 5 fruits that would be randomly placed on it.
 3. The only sensor allowed to use is the RaspberryPi camera. All other sensors onboard the Alphabot such as IR and ultrasonic sensors were strictly prohibited. Since this robot didn't have wheel encoders, we had to regularly recalibrate the robot's driving parameters to ensure the robot's actual motion did not deviate too much from its predicted trajectory.
 
 
