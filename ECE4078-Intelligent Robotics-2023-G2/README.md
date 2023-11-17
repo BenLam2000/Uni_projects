@@ -47,9 +47,39 @@ Once we have the aligned map of all ArUco markers, we now need to obtain all 5 f
 </div>
 
 ## 3.1: Localization Using Trilateration
+After attempting to use SLAM for this localization with different parameter settings, we realized it would take too long to find the right combination of settings and even then it would be very inconsistent between attempts.
 
+*pic of trilateration custom drawn*
+
+Therefore, we switched to localization using trilateration, where the robot is able to estimate its location with just distance measurements of any 3 observed markers while rotating on the spot. We found this method to be more robust and consistent because it is independent of previous location estimates along the path, unlike SLAM, whose error will accumulate as the robot deviates more from its desired trajectory.
 
 ## 3.2: Obtaining Relative Fruit Distance Using Object Recognition
+To recognize the fruits, we have trained a YOLOv8 object detection model with our custom generated dataset (10000 images) consisting of superimposed fruits and other obstacles onto background images of the arena. Data augmentation techniques were used to increase variation and dataset size to make the model recognize the fruits under different lighting conditions and from differnt angles. 
+
+*example of augmented images*
+*image of M3 GUI*
+
+The bounding box dimensions detected via the model would be used to estimate the relative distance from the robot to the fruit.
+
+*drawing of relative fruit distance*
+
+
+# Part 4: Autonomous fruit search
+
+
+## 4.1: Path Planning
+- need to find 3 fruits, other 2 and 10 aruco markers are obstacles to avoid
+- obstacle avoidance in built (will incur penalty if collide with obstacle)
+- astar algorithm (pic)
+ - creates a path for each fruit to visit
+ - broken down into multiple waypoints with a max distance to check position regularly, won't deviate so far until it collides with an obstacle
+- movement is just turning to desired angle and deiving straight (simple)
+
+
+##
+
+
+
 
 
 
