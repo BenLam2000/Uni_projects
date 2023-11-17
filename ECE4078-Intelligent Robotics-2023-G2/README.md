@@ -65,18 +65,17 @@ The bounding box dimensions detected via the model would be used to estimate the
 
 
 # Part 4: Autonomous fruit search
+The aligned SLAM map and fruit locations from previous parts are used in this final part where the robot is tasked to visit 3 fruits (stop within 50cm radius) in a particular order, while the 2 remaining fruits and the 10 ArUco markers will be treated as obstacles. These obstacles must be avoided otherwise a penalty will be incurred. The most crucial aspect to achieve this task is path planning.
 
 
 ## 4.1: Path Planning
-- need to find 3 fruits, other 2 and 10 aruco markers are obstacles to avoid
-- obstacle avoidance in built (will incur penalty if collide with obstacle)
-- astar algorithm (pic)
- - creates a path for each fruit to visit
- - broken down into multiple waypoints with a max distance to check position regularly, won't deviate so far until it collides with an obstacle
-- movement is just turning to desired angle and deiving straight (simple)
+The robot uses the A* (A-star) search algorithm to plan the path from starting point to the final fruit by setting multiple waypoints in between. A-star was the preferred algorithm because it implements a grid-based approach, which is very compatible with our arena.
 
+*pic of astar drawn*
 
-##
+After the robot reaches each waypoint, it will rotate on the spot and perform trilateration similar to part 3 *link to one of the turn360 measure in part 4 video* to estimate its current location. The path will be adjusted so that it always uses the current location estimate and the next waypoint, so it will be robust even if the robot does not reach precisely at the desired waypoint.
+
+The maximum allowable distance between any 2 waypoints is set to a relatively small value compared to each grid of the arena so that it checks its current location often enough that it will not deviate from the desired waypoint until it collides with an obstacle or go out of arena bounds. In a way this is considered in-built obstacle avoidance and a dedicated algorithm is no longer needed for this.
 
 
 
