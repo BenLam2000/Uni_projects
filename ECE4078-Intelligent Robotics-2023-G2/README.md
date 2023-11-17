@@ -1,7 +1,6 @@
 # Overview
 <p align="justify">
-The goal of this group-based semester-long project was to build a robot that can locate 3 specified fruits in an arena in sequence autonomously while avoiding obstacles.
-</p>
+The goal of this group-based semester-long project was to develop and autonomous robot that can locate 3 fruits in an arena in a specified sequence while avoiding obstacles. [This](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5) is a video of the final robot demonstration.</p>
 
 # Rules and restrictions
 <div align="center">
@@ -14,7 +13,8 @@ The goal of this group-based semester-long project was to build a robot that can
 2. All groups had to use the provided arena for the robot demonstration, with 10 AruCo markers and 5 fruits that would be randomly placed on it.
 3. The only sensor allowed to use is the RaspberryPi camera. All other sensors onboard the Alphabot such as IR and ultrasonic sensors were strictly prohibited. Since this robot didn't have wheel encoders, we had to regularly recalibrate the robot's driving parameters to ensure the robot's actual motion did not deviate too much from its predicted trajectory.
 
-Based on this [video of the final robot demo](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5), the following are the main parts shown in the video:
+
+The following are the main parts shown in the demo video:
 
 # Part 2: SLAM
 <div align="justify">
