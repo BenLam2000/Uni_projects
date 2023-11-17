@@ -1,16 +1,20 @@
 # Overview
 <p align="justify">
-The goal of this group-based semester-long project was to develop an autonomous robot that can locate 3 fruits in an arena in a specified sequence while avoiding obstacles. [This](https://youtu.be/f8h7jwVJRQ0?si=i3vBQcp5ochfqqM5) is a video of the final robot demonstration.</p>
+The goal of this group-based semester-long project was to develop an autonomous robot that can locate 3 fruits in an arena in a specified sequence while avoiding obstacles. <a href="https://youtu.be/f8h7jwVJRQ0?si=PVQi02WeHcUocjod" target="_blank">This</a> is a video of the final robot demonstration.
+</p>
 
 # Rules and restrictions
 <div align="center">
     <a href="" target="blank"><img align="center" src="https://github.com/BenLam2000/Uni_projects/blob/main/ECE4078-Intelligent%20Robotics-2023-G2/pics/Alphabot2-pizero-8.jpg?raw=true" height="200" /></a>
 </div>
 1. All groups had to use the provided robot - Alphabot2, which had a RaspberryPi as its core. Python was the language to program the robot.
+
 <div align="center">
     <a href="" target="blank"><img align="center" src="https://github.com/BenLam2000/Uni_projects/blob/main/ECE4078-Intelligent%20Robotics-2023-G2/pics/arena_labelled.png?raw=true" height="400" /></a>
 </div>
+
 2. All groups had to use the provided arena for the robot demonstration, with 10 ArUco markers and 5 fruits that would be randomly placed on it.
+
 3. The only sensor allowed to use is the RaspberryPi camera. All other sensors onboard the Alphabot such as IR and ultrasonic sensors were strictly prohibited. Since this robot didn't have wheel encoders, we had to regularly recalibrate the robot's driving parameters to ensure the robot's actual motion did not deviate too much from its predicted trajectory.
 
 
@@ -51,7 +55,7 @@ After attempting to use SLAM for this localization with different parameter sett
 
 *pic of trilateration custom drawn*
 
-Therefore, we switched to localization using trilateration, where the robot is able to estimate its location with just distance measurements of any 3 observed markers while rotating on the spot. We found this method to be more robust and consistent because it is independent of previous location estimates along the path, unlike SLAM, whose error will accumulate as the robot deviates more from its desired trajectory.
+Therefore, we switched to localization using <a href="https://www.101computing.net/cell-phone-trilateration-algorithm/" target="_blank">trilateration</a>, where the robot is able to estimate its location with just distance measurements of any 3 observed markers while rotating on the spot. We found this method to be more robust and consistent because it is independent of previous location estimates along the path, unlike SLAM, whose error will accumulate as the robot deviates more from its desired trajectory.
 
 ## 3.2: Obtaining Relative Fruit Distance Using Object Recognition
 To recognize the fruits, we have trained a YOLOv8 object detection model with our custom generated dataset (10000 images) consisting of superimposed fruits and other obstacles onto background images of the arena. Data augmentation techniques were used to increase variation and dataset size to make the model recognize the fruits under different lighting conditions and from differnt angles. 
@@ -60,9 +64,6 @@ To recognize the fruits, we have trained a YOLOv8 object detection model with ou
 *image of M3 GUI*
 
 The bounding box dimensions detected via the model would be used to estimate the relative distance from the robot to the fruit.
-
-*drawing of relative fruit distance*
-
 
 # Part 4: Autonomous fruit search
 The aligned SLAM map and fruit locations from previous parts are used in this final part where the robot is tasked to visit 3 fruits (stop within 50cm radius) in a particular order, while the 2 remaining fruits and the 10 ArUco markers will be treated as obstacles. These obstacles must be avoided otherwise a penalty will be incurred. The most crucial aspect to achieve this task is path planning.
@@ -73,7 +74,7 @@ The robot uses the A* (A-star) search algorithm to plan the path from starting p
 
 *pic of astar drawn*
 
-After the robot reaches each waypoint, it will rotate on the spot and perform trilateration similar to part 3 *link to one of the turn360 measure in part 4 video* to estimate its current location. The path will be adjusted so that it always uses the current location estimate and the next waypoint, so it will be robust even if the robot does not reach precisely at the desired waypoint.
+After the robot reaches each waypoint, it will rotate on the spot and perform trilateration similar to part 3 (<a href="https://youtu.be/f8h7jwVJRQ0?si=wPZ15ErTzgAfGS_a&t=883" target="_blank">from video</a>) to estimate its current location. The path will be adjusted so that it always uses the current location estimate and the next waypoint, so it will be robust even if the robot does not reach precisely at the desired waypoint.
 
 The maximum allowable distance between any 2 waypoints is set to a relatively small value compared to each grid of the arena so that it checks its current location often enough that it will not deviate from the desired waypoint until it collides with an obstacle or go out of arena bounds. In a way this is considered in-built obstacle avoidance and a dedicated algorithm is no longer needed for this.
 
